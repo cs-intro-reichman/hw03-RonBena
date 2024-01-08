@@ -17,13 +17,14 @@ public class LoanCalc {
 		double rate = Double.parseDouble(args[1]);
 		int n = Integer.parseInt(args[2]);
 		System.out.println("Loan sum = " + loan + ", interest rate = " + rate + "%, periods = " + n);
-		
+		System.err.println(endBalance(loan,rate,n,10000));
 		// Computes the periodical payment using brute force search
 		System.out.print("Periodical payment, using brute force: ");
 		System.out.printf("%.2f", bruteForceSolver(loan, rate, n, epsilon));
 		System.out.println();
 		System.out.println("number of iterations: " + iterationCounter);
-
+		iterationCounter = 0;
+		
 		// Computes the periodical payment using bisection search
 		System.out.print("Periodical payment, using bi-section search: ");
 		System.out.printf("%.2f", bisectionSolver(loan, rate, n, epsilon));
@@ -39,8 +40,12 @@ public class LoanCalc {
 	*/
 	// Side effect: modifies the class variable iterationCounter.
     public static double bruteForceSolver(double loan, double rate, int n, double epsilon) {  
-    	// Replace the following statement with your code
-    	return 0;
+    	double g = loan/n;
+		while (endBalance(loan, rate, n, g) > 0) {
+		g += epsilon;
+		iterationCounter++;
+		}
+    	return g;
     }
     
     /**
@@ -51,8 +56,23 @@ public class LoanCalc {
 	*/
 	// Side effect: modifies the class variable iterationCounter.
     public static double bisectionSolver(double loan, double rate, int n, double epsilon) {  
-    	// Replace the following statement with your code
-    	return 0;
+    	// Sets L and H to initial values such that 𝑓(𝐿) > 0, 𝑓(𝐻) < 0,
+		// implying that the function evaluates to zero somewhere between L and H.
+		// So, let’s assume that L and H were set to such initial values.
+		// Set g to (𝐿 + 𝐻)/2
+		double H = loan + 1;
+		double L = loan/n;
+		double g = (L + H)/2;
+		while ((H - L) > epsilon) {
+			// Sets L and H for the next iteration
+			if (endBalance(loan, rate, n, g) > 0)
+			L = g;
+			else
+			H = g;
+			g = (L + H)/2;
+			iterationCounter++;
+			}
+			return g;
     }
 	
 	/**
@@ -60,7 +80,12 @@ public class LoanCalc {
 	* interest rate (as a percentage), the number of periods (n), and the periodical payment.
 	*/
 	private static double endBalance(double loan, double rate, int n, double payment) {
-		// Replace the following statement with your code
-    	return 0;
+			while(n > 0)
+			{
+				n--;
+				//System.err.println(loan);
+				loan = (loan-payment) * (1 + rate/100);
+			}
+		return loan;
 	}
 }
