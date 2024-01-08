@@ -1,9 +1,9 @@
 {
     "tests": [
     {
-    "name": "lowercase test 1",
-    "setup": "javac lowercase.java",
-    "run": "java lowercase B2C",
+    "name": "LowerCase test 1",
+    "setup": "javac LowerCase.java",
+    "run": "java LowerCase B2C",
     "input": "",
     "output": "b2c",
     "comparison": "exact",
@@ -11,9 +11,9 @@
     "points": 1.5
     },
     {
-      "name": "lowercase test 2",
-      "setup": "javac lowercase.java",
-      "run": "java lowercase \"TLV to LA: 15 Hours.\"",
+      "name": "LowerCase test 2",
+      "setup": "javac LowerCase.java",
+      "run": "java LowerCase \"TLV to LA: 15 Hours.\"",
       "input": "",
       "output": "tlv to la: 15 hours.",
       "comparison": "exact",
@@ -21,9 +21,9 @@
       "points": 1.5
     },
     {
-        "name": "lowercase test 3",
-        "setup": "javac lowercase.java",
-        "run": "java lowercase HelloWorld",
+        "name": "LowerCase test 3",
+        "setup": "javac LowerCase.java",
+        "run": "java LowerCase HelloWorld",
         "input": "",
         "output": "helloworld",
         "comparison": "exact",
@@ -31,9 +31,9 @@
         "points": 1.5
     },
     {
-        "name": "lowercase test 4",
-        "setup": "javac lowercase.java",
-        "run": "java lowercase \"JavaROCKS!\"",
+        "name": "LowerCase test 4",
+        "setup": "javac LowerCase.java",
+        "run": "java LowerCase \"JavaROCKS!\"",
         "input": "",
         "output": "javarocks!",
         "comparison": "exact",
@@ -41,9 +41,9 @@
         "points": 1.5
     },
     {
-        "name": "lowercase test 5",
-        "setup": "javac lowercase.java",
-        "run": "java lowercase \"ThIs Is SoMeTeXt.\"",
+        "name": "LowerCase test 5",
+        "setup": "javac LowerCase.java",
+        "run": "java LowerCase \"ThIs Is SoMeTeXt.\"",
         "input": "",
         "output": "this is sometext.",
         "comparison": "exact",
@@ -51,9 +51,9 @@
         "points": 1.5
     },
     {
-        "name": "lowercase test 6",
-        "setup": "javac lowercase.java",
-        "run": "java lowercase TheQuickBrownFox",
+        "name": "LowerCase test 6",
+        "setup": "javac LowerCase.java",
+        "run": "java LowerCase TheQuickBrownFox",
         "input": "",
         "output": "thequickbrownfox",
         "comparison": "exact",
@@ -61,9 +61,9 @@
         "points": 1.5
     },
     {
-        "name": "lowercase test 7",
-        "setup": "javac lowercase.java",
-        "run": "java lowercase \"JUMPsOverTheLazyDog!\"",
+        "name": "LowerCase test 7",
+        "setup": "javac LowerCase.java",
+        "run": "java LowerCase \"JUMPsOverTheLazyDog!\"",
         "input": "",
         "output": "jumpsoverthelazydog!",
         "comparison": "exact",
@@ -71,9 +71,9 @@
         "points": 1.5
     },
     {
-        "name": "lowercase test 8",
-        "setup": "javac lowercase.java",
-        "run": "java lowercase XYZ@123",
+        "name": "LowerCase test 8",
+        "setup": "javac LowerCase.java",
+        "run": "java LowerCase XYZ@123",
         "input": "",
         "output": "xyz@123",
         "comparison": "exact",
@@ -81,9 +81,9 @@
         "points": 1.5
     },
     {
-        "name": "lowercase test 9",
-        "setup": "javac lowercase.java",
-        "run": "java lowercase \"mIXEdCaSE+Symbols\"",
+        "name": "LowerCase test 9",
+        "setup": "javac LowerCase.java",
+        "run": "java LowerCase \"mIXEdCaSE+Symbols\"",
         "input": "",
         "output": "mixedcase+symbols",
         "comparison": "exact",
@@ -91,9 +91,9 @@
         "points": 1.5
     },
     {
-        "name": "lowercase test 10",
-        "setup": "javac lowercase.java",
-        "run": "java lowercase \"AaBbCcDdEe\"",
+        "name": "LowerCase test 10",
+        "setup": "javac LowerCase.java",
+        "run": "java LowerCase \"AaBbCcDdEe\"",
         "input": "",
         "output": "aabbccdde",
         "comparison": "exact",
