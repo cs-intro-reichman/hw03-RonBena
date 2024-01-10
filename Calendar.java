@@ -7,18 +7,18 @@ public class Calendar {
 	
 	public static void main(String args[]) {
 		int givenYear = Integer.parseInt(args[0]);
-	 	while (year < givenYear) {
-			advance();
-		} 
-		while (year == givenYear) {
-			System.out.print(dayOfMonth + "/" + month + "/" + year);
-			if(dayOfWeek == 1) {
-				System.out.print(" Sunday");
-			}
-				advance();
-				System.out.println("");
-		}
-    }
+        while (year < givenYear) {
+          advance();
+        } 
+        while (year == givenYear) {
+          System.out.print(dayOfMonth + "/" + month + "/" + year);
+          if(dayOfWeek == 1) {
+            System.out.print(" Sunday");
+          }
+            advance();
+            System.out.println("");
+        }
+        }
     private static void advance() {
         dayOfWeek++;
         if(dayOfWeek > 7) {
@@ -36,22 +36,21 @@ public class Calendar {
         nDaysInMonth = nDaysInMonth(month, year);
     }
     public static boolean isLeapYear(int year) {
-        boolean isLeapYear=false;
-			// Checks if the year is divisible by 400
-			if((year % 400) == 0) {
-				isLeapYear = true;
-			} else if(((year % 4) == 0) && ((year % 100) != 0)) {
-				isLeapYear = true;
-			  }
-			return isLeapYear;
+      boolean isLeapYear = false;
+      if((year % 400) == 0) {
+        isLeapYear = true;
+      } else if(((year % 4) == 0) && ((year % 100) != 0)) {
+        isLeapYear = true;
+      }
+      return isLeapYear;
       }
        
       private static int nDaysInMonth(int month, int year) {
         int daysinmonth;
-        switch (year) {
+        switch (month) {
         case 4,6,9,11: daysinmonth = 30 ;
         break;
-        case 2: if(isLeapYear(year)) daysinmonth = 28 ; else daysinmonth = 29;
+        case 2: if(isLeapYear(year)) daysinmonth = 29 ; else daysinmonth = 28;
         break;
         default: daysinmonth = 31;
         break;
