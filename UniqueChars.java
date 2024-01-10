@@ -13,7 +13,6 @@ public class UniqueChars {
     public static String uniqueChars(String s) {
         
         String ans = "" ;
-        boolean duplicate=false;
         for(int i = 0; i < s.length(); i++) {
 			char currentChar = s.charAt(i);
 			if(s.indexOf(currentChar) == i || currentChar == ' ') {
